@@ -89,3 +89,19 @@ The element will be visually hidden but will still be read by screen reader tech
   --color2: hsl(71, 73%, 54%);
   --color3: hsl(0, 0%, 100%);
 }
+
+.card-1 {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.card-2 {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.card-3 {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.card-4 {
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
