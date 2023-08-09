@@ -90,18 +90,63 @@ The element will be visually hidden but will still be read by screen reader tech
   --color3: hsl(0, 0%, 100%);
 }
 
+main {
+  display: grid;
+  padding: 15px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 1fr);
+}
+
+h1 {
+  grid-area: title-1;
+
+}
+
+h2 {
+  grid-area: title-2;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
 .card-1 {
   border-top: 4px solid hsl(180, 62%, 55%);
+  grid-area: card-1;
 }
 
 .card-2 {
   border-top: 4px solid hsl(0, 78%, 62%);
+  grid-area: card-2;
 }
 
 .card-3 {
   border-top: 4px solid hsl(34, 97%, 64%);
+  grid-area: card-3;
 }
 
 .card-4 {
   border-top: 4px solid hsl(212, 86%, 64%);
+  grid-area: card-4;
+}
+
+@media (min-width: 800px) {
+  
+  main {
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:  ". . . title-1 title-1 title-1 title-1 . . . ."
+                          ". . . title-2 title-2 title-2 title-2 . . . ."
+                          ". . . . card-2 card-2 card-2  . . . ."
+                          ". card-1 card-1 card-1 card-2 card-2 card-2 card-4 card-4 card-4 ."
+                          ". card-1 card-1 card-1 card-3 card-3 card-3 card-4 card-4 card-4 ."
+                          ". . . . . . . . . . ."
+                          ". . . . . . . . . . ."
+                          ". . . . . . . . . . ."
+                          ". . . . . . . . . . ."
+                          ". . . . . . . . . . ."
+                          ". . . . . . . . . . ."
+                          ". . . . . . . . . . .";
+
+  }
 }
