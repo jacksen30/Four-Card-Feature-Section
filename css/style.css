@@ -175,12 +175,14 @@ h3 {
   
   main {
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 90px);
     grid-template-areas:  ". . . hero-card hero-card hero-card hero-card hero-card . . ."
+                          ". . . hero-card hero-card hero-card hero-card hero-card . . ."
                           ". . . . card-2 card-2 card-2  . . . ."
                           ". card-1 card-1 card-1 card-2 card-2 card-2 card-4 card-4 card-4 ."
                           ". card-1 card-1 card-1 card-3 card-3 card-3 card-4 card-4 card-4 ."
-                          ". . . . . . . . . . .";
+                          ". . . . card-3 card-3 card-3 . . . .";
+    gap: 50px;
 
   }
 }
