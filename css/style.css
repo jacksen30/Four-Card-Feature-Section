@@ -92,36 +92,57 @@ The element will be visually hidden but will still be read by screen reader tech
 
 main {
   display: grid;
-  padding: 15px;
+  padding: 5%;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-areas:  "hero-title"
-                        "hero-text"
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:  "hero-card"
                         "card-1"
                         "card-2"
                         "card-3"
                         "card-4";
   background-color: var(--color3);
+  row-gap: 30px;
 }
 
+.hero-card {
+  grid-area: hero-card;
+  text-align: center;
+}
 .hero-title {
-  grid-area: hero-title;
-  color: var(--color2);
-
+  color: var(--color1);
+  font-weight: 200;
 }
+
+.hero-title-bold {
+  font-weight: bold;
+}
+
 
 .hero-text {
-  grid-area: hero-text;
+  color: var(--color2);
+  font-size: 1.125rem;
 }
 
 h3 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   background-color: #FFF;
+  padding: 7%;
+  border-radius: 5px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: var(--color1);
+}
+
+.card-text {
+  color: var(--color2);
+  font-size: 1.1rem;
 }
 
 .card-1 {
@@ -147,24 +168,18 @@ h3 {
 .card-icon {
   justify-self: flex-end;
   align-self: flex-end;
+  margin-top: 1rem;
 }
 
 @media (min-width: 800px) {
   
   main {
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-template-areas:  ". . . hero-title hero-title hero-title hero-title . . . ."
-                          ". . . hero-text hero-text hero-text hero-text . . . ."
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:  ". . . hero-card hero-card hero-card hero-card hero-card . . ."
                           ". . . . card-2 card-2 card-2  . . . ."
                           ". card-1 card-1 card-1 card-2 card-2 card-2 card-4 card-4 card-4 ."
                           ". card-1 card-1 card-1 card-3 card-3 card-3 card-4 card-4 card-4 ."
-                          ". . . . . . . . . . ."
-                          ". . . . . . . . . . ."
-                          ". . . . . . . . . . ."
-                          ". . . . . . . . . . ."
-                          ". . . . . . . . . . ."
-                          ". . . . . . . . . . ."
                           ". . . . . . . . . . .";
 
   }
