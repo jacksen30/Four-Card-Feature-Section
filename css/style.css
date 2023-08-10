@@ -85,29 +85,43 @@ The element will be visually hidden but will still be read by screen reader tech
 /* MY CUSTOM CSS RULES BELOW */
 
 :root {
-  --color1: hsl(179 53% 50%);
-  --color2: hsl(71, 73%, 54%);
-  --color3: hsl(0, 0%, 100%);
+  --color1: hsl(234, 12%, 34%); /* Very Dark Blue */
+  --color2: hsl(229, 6%, 66%);  /* Grayish Blue */
+  --color3: hsl(0, 0%, 98%);  /* Very Light Gray */
 }
 
 main {
   display: grid;
   padding: 15px;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:  "hero-title"
+                        "hero-text"
+                        "card-1"
+                        "card-2"
+                        "card-3"
+                        "card-4";
+  background-color: var(--color3);
 }
 
-h1 {
-  grid-area: title-1;
+.hero-title {
+  grid-area: hero-title;
+  color: var(--color2);
 
 }
 
-h2 {
-  grid-area: title-2;
+.hero-text {
+  grid-area: hero-text;
 }
 
 h3 {
   font-size: 1.125rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
 }
 
 .card-1 {
@@ -130,13 +144,18 @@ h3 {
   grid-area: card-4;
 }
 
+.card-icon {
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
 @media (min-width: 800px) {
   
   main {
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    grid-template-areas:  ". . . title-1 title-1 title-1 title-1 . . . ."
-                          ". . . title-2 title-2 title-2 title-2 . . . ."
+    grid-template-areas:  ". . . hero-title hero-title hero-title hero-title . . . ."
+                          ". . . hero-text hero-text hero-text hero-text . . . ."
                           ". . . . card-2 card-2 card-2  . . . ."
                           ". card-1 card-1 card-1 card-2 card-2 card-2 card-4 card-4 card-4 ."
                           ". card-1 card-1 card-1 card-3 card-3 card-3 card-4 card-4 card-4 ."
