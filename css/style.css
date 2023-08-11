@@ -35,8 +35,10 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  font-family: 'Poppins', sans-serif;;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+
 }
 
 /* A elements that don't have a class get default styles */
@@ -114,13 +116,14 @@ main {
 }
 
 .hero-title-bold {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 
 .hero-text {
   color: var(--color2);
   font-size: 1.125rem;
+  font-weight: 400;
 }
 
 h3 {
@@ -137,12 +140,14 @@ h3 {
 
 .card-title {
   font-size: 1.4rem;
+  font-weight: 600;
   color: var(--color1);
 }
 
 .card-text {
   color: var(--color2);
   font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .card-1 {
