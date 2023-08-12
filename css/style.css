@@ -86,12 +86,14 @@ The element will be visually hidden but will still be read by screen reader tech
 
 /* MY CUSTOM CSS RULES BELOW */
 
+/* Reusable Custom CSS Variables */
 :root {
   --color1: hsl(234, 12%, 34%); /* Very Dark Blue */
   --color2: hsl(229, 6%, 66%);  /* Grayish Blue */
   --color3: hsl(0, 0%, 98%);  /* Very Light Gray */
 }
 
+/* Divs & Containers */
 main {
   display: grid;
   padding: 5%;
@@ -110,25 +112,6 @@ main {
   grid-area: hero-card;
   text-align: center;
 }
-.hero-title {
-  color: var(--color1);
-  font-weight: 200;
-}
-
-.hero-title-bold {
-  font-weight: 600;
-}
-
-
-.hero-text {
-  color: var(--color2);
-  font-size: 1.125rem;
-  font-weight: 400;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
 
 .card {
   display: flex;
@@ -136,18 +119,6 @@ h3 {
   background-color: #FFF;
   padding: 7%;
   border-radius: 5px;
-}
-
-.card-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--color1);
-}
-
-.card-text {
-  color: var(--color2);
-  font-size: 1.1rem;
-  font-weight: 400;
 }
 
 .card-1 {
@@ -168,6 +139,39 @@ h3 {
 .card-4 {
   border-top: 4px solid hsl(212, 86%, 64%);
   grid-area: card-4;
+}
+
+.card-icon {
+  justify-self: flex-end;
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+/* Typography */
+
+.hero-title {
+  color: var(--color1);
+  font-weight: 200;
+}
+
+.hero-title-bold {
+  font-weight: 600;
+}
+
+.hero-text {
+  color: var(--color2);
+  font-size: 1.125rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color1);
+}
+
+.card-text {
+  color: var(--color2);
+  font-size: 1.1rem;
 }
 
 .card-icon {
