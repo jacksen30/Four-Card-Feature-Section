@@ -10,6 +10,7 @@ This is my personal solution to the [Four card feature section challenge on Fron
 * The page currently has 3 breakpoints but more could be added in the future.
 * Rems are used as the prefered unit of measure. 
 * CSS variables added for colors that are re-used on multiple elements, this way the color scheme can be changed easily.
+* Implement BEM naming conventions where appropriate
 
 
 ## Table of contents
@@ -20,10 +21,10 @@ This is my personal solution to the [Four card feature section challenge on Fron
   - [Author](#author)
 
 ### Screenshot
-##### Desktop View - Below
+##### Desktop View - Below (1440px viewport width)
 ![Desktop Screenshot](./images/desktop-view.png)
 
-##### Mobile View - Below
+##### Mobile View - Below (375px viewport width)
 ![Mobile Screenshot](./images/mobile-view-p1.png)
 ![Mobile Screenshot](./images/mobile-view-p2.png)
 
@@ -39,6 +40,7 @@ This is my personal solution to the [Four card feature section challenge on Fron
 - CSS 3
 - CSS GRID layout
 - CSS FLEX layout for contents of the card elements
+- BEM naming conventions
 
 ## Author
 
