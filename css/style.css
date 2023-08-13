@@ -88,9 +88,9 @@ The element will be visually hidden but will still be read by screen reader tech
 
 /* Reusable Custom CSS Variables */
 :root {
-  --color1: hsl(234, 12%, 34%); /* Very Dark Blue */
-  --color2: hsl(229, 6%, 66%);  /* Grayish Blue */
-  --color3: hsl(0, 0%, 98%);  /* Very Light Gray */
+  --colorTitle: hsl(234, 12%, 34%);   /* Very Dark Blue */
+  --colorText: hsl(229, 6%, 66%);     /* Grayish Blue */
+  --colorBackground: hsl(0, 0%, 98%); /* Very Light Gray */
 }
 
 /* Divs & Containers */
@@ -104,7 +104,7 @@ main {
                         "card-2"
                         "card-3"
                         "card-4";
-  background-color: var(--color3);
+  background-color: var(--colorBackground);
   row-gap: 30px;
 }
 
@@ -153,7 +153,7 @@ main {
 /* Typography */
 
 .hero__title {
-  color: var(--color1);
+  color: var(--colorTitle);
   font-weight: 200;
   font-size: 1.65rem;
 }
@@ -163,7 +163,7 @@ main {
 }
 
 .hero__text {
-  color: var(--color2);
+  color: var(--colorText);
   font-size: 0.9rem;
   margin-top: 1.1rem;
 }
@@ -171,11 +171,11 @@ main {
 .card__title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--color1);
+  color: var(--colorTitle);
 }
 
 .card__text {
-  color: var(--color2);
+  color: var(--colorText);
   font-size: 0.85rem;
   margin-top: 0.5rem;
 }
