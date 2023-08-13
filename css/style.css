@@ -96,7 +96,7 @@ The element will be visually hidden but will still be read by screen reader tech
 /* Divs & Containers */
 main {
   display: grid;
-  padding: 5%;
+  padding: 10% 5% 5% 5%;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas:  "hero-card"
@@ -109,6 +109,9 @@ main {
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   grid-area: hero-card;
   text-align: center;
 }
@@ -152,6 +155,7 @@ main {
 .hero__title {
   color: var(--color1);
   font-weight: 200;
+  font-size: 1.65rem;
 }
 
 .hero__title--bold {
@@ -160,18 +164,20 @@ main {
 
 .hero__text {
   color: var(--color2);
-  font-size: 1.125rem;
+  font-size: 0.9rem;
+  margin-top: 1.1rem;
 }
 
 .card__title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--color1);
 }
 
 .card__text {
   color: var(--color2);
-  font-size: 1.1rem;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
 }
 
 .card__icon {
@@ -180,18 +186,62 @@ main {
   margin-top: 1rem;
 }
 
+
+
+/* Media Queries: Targeting Tablets and Desktop Viewports */
+
+@media (min-width: 600px) and (max-width: 799px) {
+  
+  main {
+    padding: 10% 12% 5% 12%;
+  }
+
+  .hero__text {
+    width: 80%;
+  }
+}
+
+
 @media (min-width: 800px) {
   
   main {
+    padding: 5% 5% 5% 5%;
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(6, 90px);
+    grid-template-rows: auto;
     grid-template-areas:  ". . . hero-card hero-card hero-card hero-card hero-card . . ."
                           ". . . hero-card hero-card hero-card hero-card hero-card . . ."
                           ". . . . card-2 card-2 card-2  . . . ."
                           ". card-1 card-1 card-1 card-2 card-2 card-2 card-4 card-4 card-4 ."
                           ". card-1 card-1 card-1 card-3 card-3 card-3 card-4 card-4 card-4 ."
                           ". . . . card-3 card-3 card-3 . . . .";
-    gap: 50px;
+    gap: 25px;
+  }
 
+  .hero {
+    margin-bottom: 1.2rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__text {
+    width: 80%;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  
+  main {
+    padding: 2% 5% 2% 5%;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .hero__text {
+    font-size: 1rem;
   }
 }
