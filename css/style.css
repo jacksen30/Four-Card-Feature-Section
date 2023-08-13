@@ -94,6 +94,10 @@ The element will be visually hidden but will still be read by screen reader tech
 }
 
 /* Divs & Containers */
+body {
+  background-color: var(--colorBackground);
+}
+
 main {
   display: grid;
   padding: 10% 5% 5% 5%;
@@ -104,7 +108,6 @@ main {
                         "card-2"
                         "card-3"
                         "card-4";
-  background-color: var(--colorBackground);
   row-gap: 30px;
 }
 
